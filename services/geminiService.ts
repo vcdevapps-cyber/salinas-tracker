@@ -6,7 +6,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 
 // Initialize the Google Generative AI client
 const genAI = new GoogleGenerativeAI(apiKey);
-const modelId = 'gemini-2.0-flash-exp'; // Updated model
+const modelId = 'gemini-1.5-flash'; // Switched to stable model
 
 // Helper to extract sources from grounding metadata - adapted for new SDK response structure if needed
 // Note: Browser SDK response structure might differ slightly, but usually follows similar patterns for complex objects if typed as any
@@ -101,10 +101,10 @@ export const fetchSalinasNews = async (): Promise<SearchResult> => {
       sources: extractSources(response), // Pass the response object which has candidates
       newsItems: newsItems
     };
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error fetching news:", error);
     return {
-      text: "Erro ao buscar notícias. Verifique a chave de API.",
+      text: `Erro ao buscar notícias: ${error.message || error}. Verifique a chave API.`,
       sources: []
     };
   }
