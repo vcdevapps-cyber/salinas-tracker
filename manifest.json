@@ -1,0 +1,20 @@
+{
+  "name": "Salinas InfoTracker",
+  "short_name": "SalinasInfo",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0891b2",
+  "icons": [
+    {
+      "src": "https://placehold.co/192x192/0891b2/ffffff?text=Salinas",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://placehold.co/512x512/0891b2/ffffff?text=Salinas",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Salinas InfoTracker",
+  "description": "Um PWA mobile-first para rastrear notícias, turismo e informações culturais sobre Salinas da Margarida, Bahia, utilizando IA em tempo real.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
